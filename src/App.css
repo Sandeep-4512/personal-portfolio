@@ -16,9 +16,12 @@ body {
 header {
   background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
-  padding: 1.5rem 2rem;
+  padding: 1rem 1.5rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   animation: slideDown 0.6s ease-in-out;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 @keyframes slideDown {
@@ -36,15 +39,14 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow-x: auto;
 }
 
 nav ul {
   display: flex;
+  flex-wrap: nowrap;
   list-style: none;
-}
-
-nav ul li {
-  margin-left: 25px;
+  gap: 18px;
 }
 
 nav ul li a {
@@ -60,18 +62,34 @@ nav ul li a:hover {
   transform: scale(1.1);
 }
 
-/* SECTION */
-section {
-  padding: 1.5rem 2rem;
-  margin-bottom: 1rem;
-  animation: fadeIn 0.8s ease;
+nav ul li a i {
+  margin-right: 8px;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* SECTION */
+section {
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 0.5rem;
+  animation: fadeIn 0.6s ease;
+}
+
+/* Reduce spacing between sections */
+section + section {
+  margin-top: 0.5rem;
+}
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(15px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -82,24 +100,24 @@ section {
 /* PROJECT CARD */
 .project-card {
   background: #ffffff;
-  margin-top: 2rem;
-  padding: 2rem;
-  border-left: 6px solid #764ba2;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
+  margin-top: 1rem;
+  padding: 1.5rem;
+  border-left: 4px solid #764ba2;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-card h3 {
   color: #764ba2;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
 }
@@ -110,14 +128,14 @@ section {
 }
 
 .project-card p {
-  margin-top: 0.6rem;
-  line-height: 1.5;
-  font-size: 1rem;
+  margin-top: 0.4rem;
+  line-height: 1.4;
+  font-size: 0.95rem;
 }
 
 .project-card a {
   display: inline-block;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
   color: #667eea;
   text-decoration: none;
   font-weight: bold;
@@ -129,39 +147,7 @@ section {
   text-decoration: underline;
 }
 
-/* FOOTER */
-footer {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-  text-align: center;
-  padding: 1.5rem;
-  margin-top: 3rem;
-  font-size: 0.95rem;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 1rem;
-  }
-
-  .project-card {
-    padding: 1.5rem;
-  }
-}
-nav ul li a i {
-  margin-right: 8px;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
+/* PROFILE IMAGE */
 .profile-link {
   display: inline-block;
   transition: transform 0.3s ease;
@@ -208,4 +194,36 @@ nav ul li a i {
   transform: translateX(-50%);
   color: #764ba2;
   font-size: 0.9rem;
+}
+
+/* FOOTER */
+footer {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  section {
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  section + section {
+    margin-top: 0.4rem;
+  }
+
+  .project-card {
+    padding: 1.2rem;
+  }
+
+  nav ul {
+    flex-direction: row !important; /* force horizontal */
+    overflow-x: auto;
+    gap: 14px;
+  }
 }
