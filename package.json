@@ -2,7 +2,7 @@
   "name": "sandeep-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Sandeep-4512.github.io/personal-portfolio",
+  "homepage": "https://personal-portfolio-gray-one-94.vercel.app/",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
     "react": "^18.2.0",
