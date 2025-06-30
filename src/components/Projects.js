@@ -1,25 +1,46 @@
 import React from 'react';
+import { FaWallet, FaMobileAlt, FaGithub } from 'react-icons/fa';
+import { BsGlobe } from 'react-icons/bs';
 
 const Projects = () => (
-  <section id="projects">
-    <h2>Projects</h2>
-    <div className="project-card">
-      <h3>
-      <i className="fas fa-wallet"></i>Personal Finance Manager</h3>
+  <section id="projects" className="section projects-section">
+    <h2>🚀 Projects</h2>
+
+    {/* Personal Finance Manager */}
+    <details className="project-card" open>
+      <summary><FaWallet /> Personal Finance Manager</summary>
       <p>
-        Developed a financial tracking application, enabling users to manage expenses, set budgets, and analyze spending trends.
+        Developed a full-stack web application to help users track and manage their finances with interactive data visualizations.
       </p>
       <p>
-        Built using <strong>React.js</strong>, <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>MongoDB</strong>, integrating data visualization with <strong>Chart.js</strong>.
+        Built using <strong>React.js</strong>, <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>MongoDB</strong>, with charts via <strong>Chart.js</strong>.
       </p>
-      <p>Tech Stack <strong>MERN</strong></p>
+      <p><strong>Tech Stack:</strong> MERN</p>
       <p>
-        Project website:{' '}
+        <BsGlobe /> Website:{' '}
         <a href="https://personal-finance-manager-app-black.vercel.app/" target="_blank" rel="noopener noreferrer">
-          https://personal-finance-manager-app-black.vercel.app/
+          personal-finance-manager-app-black.vercel.app
         </a>
       </p>
-    </div>
+    </details>
+
+    {/* Job Finder App */}
+    <details className="project-card">
+      <summary><FaMobileAlt /> Job Finder App</summary>
+      <p>
+        A mobile-first job portal connecting recruiters and job seekers, built for real-time interaction, job tracking, and resume uploads.
+      </p>
+      <p>
+        Developed using <strong>React Native</strong>, <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>MongoDB</strong>, integrated with <strong>JWT</strong> and deployed via <strong>Expo</strong> & <strong>Render</strong>.
+      </p>
+      <p><strong>Tech Stack:</strong> MERN + React Native</p>
+      <p>
+        <FaGithub /> GitHub:{' '}
+        <a href="https://github.com/Sandeep-4512/JobFinder2.git" target="_blank" rel="noopener noreferrer">
+          github.com/Sandeep-4512/JobFinder2.git
+        </a>
+      </p>
+    </details>
   </section>
 );
 
