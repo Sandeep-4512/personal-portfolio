@@ -52,13 +52,18 @@ function App() {
         <p>&copy; 2025 Sandeep. All rights reserved.</p>
       </footer>
 
-      {/* Fullscreen profile view */}
+      {/* Fullscreen Profile View */}
       {isProfileOpen && (
-        <div className="fullscreen-profile">
-          <button className="close-profile" onClick={toggleProfile}>
-            &times;
-          </button>
-          <img src="/profile.jpg" alt="Profile Full View" className="profile-full-image" />
+        <div className="profile-fullscreen-overlay" onClick={toggleProfile}>
+          <div className="profile-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-profile" onClick={toggleProfile}>&times;</button>
+            <img
+              src="/profile.jpg"
+              alt="Sandeep Full"
+              className="profile-full-image"
+            />
+            <p className="profile-name">Sandeep Kumar Peddareddy</p>
+          </div>
         </div>
       )}
     </div>

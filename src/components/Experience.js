@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaBrain, FaCode, FaMobileAlt } from 'react-icons/fa';
+import '../App.css';
 
 const Experience = () => (
   <section id="experience" className="section experience-section">

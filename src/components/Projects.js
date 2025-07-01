@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaWallet, FaMobileAlt, FaGithub } from 'react-icons/fa';
 import { BsGlobe } from 'react-icons/bs';
+import '../App.css';
 
 const Projects = () => (
   <section id="projects" className="section projects-section">
