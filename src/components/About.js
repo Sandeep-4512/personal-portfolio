@@ -27,17 +27,17 @@ function About() {
 
           <details>
             <summary>🛠️ <strong>Tools</strong></summary>
-            <p>Jupyter Notebook, Excel, Power BI</p>
+            <p>SQL Server,Jupyter Notebook, Excel, Power BI</p>
           </details>
 
           <details>
             <summary>🗄️ <strong>Databases</strong></summary>
-            <p>MySQL, SQLite</p>
+            <p>MySQL, MSSQL</p>
           </details>
 
           <details>
             <summary>🧰 <strong>Developer Tools</strong></summary>
-            <p>Git/GitHub, Google Colab, VS Code, Anaconda</p>
+            <p>Git/GitHub,SSMS, Google Colab, VS Code, Anaconda</p>
           </details>
 
           <details>
